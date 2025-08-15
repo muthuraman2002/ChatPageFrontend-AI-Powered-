@@ -16,9 +16,9 @@ function ForgetPassword() {
       setError('Please enter your email.');
       return;
     }
-
+console.log(email)
     try {
-      const res = await axiosInstance.post('/auth/forgot-password', { email });
+      const res = await axiosInstance.post('/forgot-password', { email });
 
       if (res.status === 200) {
         setMessage('Password reset link sent to your email.');
